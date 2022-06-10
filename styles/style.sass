@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$bg-color: #14bdac
+$border-color: #0da192
+
+html, body
+    margin: 0
+    height: 100%
+body
+    background-color: $bg-color
+    font-family: 'Nunito', cursive
+
+.game-field
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .field-heading
+        height: 25%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-content: center
+        transition: 0.3s
+        padding-top: 1.5%
+    .field-h
+        display: flex
+        color: #002147
+        font-size: 8vh
+        line-height: 0vh
+        font-weight: 900 
+        text-align: center
+        justify-content: center
+        align-content: center
+        transition: 0.3s
+        
+    .field-players
+        display: flex
+        flex-direction: row
+        align-items: center
+        transition: 0.3s
+    .player
+        font-size: 4vh
+        font-weight: 800 
+        line-height: 0.2em 
+        width: 30vh 
+        text-align: center
+        transition: 0.3s
+    .score 
+        display: flex
+        flex-direction: row
+        align-items: center
+        font-size: 5vh
+        font-weight: 800 
+        transition: 0.3s
+        
+    .one-score
+        padding-right: 1vh 
+        transition: 0.3s 
+    .two-score
+        padding-left: 1vh 
+        transition: 0.3s   
+    .field
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        height: 60%
+        align-content: center 
+        grid-gap: 0px   
+        transition: 0.3s
+        margin: 0
+        padding-left: 0.6%
+    .field-cell.one
+        border-right: 1.2vh solid 
+        border-bottom: 1.2vh solid 
+        border-color: $border-color
+    .field-cell.two, .field-cell.four, .field-cell.five  
+        border-right: 1.2vh solid
+        border-bottom: 1.2vh solid 
+        border-color: $border-color
+    .field-cell.three, .field-cell.six  
+        border-bottom: 1.2vh solid
+        border-color: $border-color
+        margin-left: -1.2vh
+    .field-cell.seven, .field-cell.eight 
+        border-right: 1.2vh solid
+        border-color: $border-color  
+    .field-cell.nine
+        margin-left: -1.2vh         
+    .field-cell
+        align-self: center
+        justify-self: center
+        width: 17vh
+        height: 17vh
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 15vh
+        padding-top: 1vh
+        font-weight: 400
+        transition: 0.3s
+        color: #ffffff00
+        
+    .field-buttons
+        height: 12%
+        padding-top: 1%
+        transition: 0.3s
+        .button
+            background-color: #202124
+            color: #ffffff
+            height: 7.5vh
+            border: none
+            border-radius: 2vh
+            font-family: 'Nunito', cursive
+            font-weight: 700
+            font-size: 2.5vh
+            margin-right: 1vh
+            margin-left: 1vh
+            width: 25vh
+            transition: 0.3s
+.highlight1
+    transition: 0.3s
+    color: #f2ebd3
+.highlight2
+    transition: 0.3s
+    color: #545454          
+.win-line
+.win-line::after
+    content: ''
+    position: absolute
+    animation: reveal 2s backwards
+    width: 58vh
+    height: 1.4vh
+    background-color: #005c53
+    transition: 0.3s
+
+.win-column
+.win-column::after
+    content: ''
+    position: absolute
+    transform: rotate(90deg)
+    animation: reveal 2s backwards
+    width: 60vh
+    height: 1.4vh
+    background-color: #005c53
+    transition: 0.3s
+    margin-top: -0.7vh
+    
+    
+.win-diagonal-l-r
+.win-diagonal-l-r::after
+    content: ''
+    position: absolute
+    transform: rotate(46.5deg)
+    animation: reveal 2s backwards
+    width: 80vh
+    height: 1.4vh
+    background-color: #005c53
+    transition: 0.3s
+    margin-bottom: 0.8vh
+    
+.win-diagonal-r-l
+.win-diagonal-r-l::after
+    content: ''
+    position: absolute
+    transform: rotate(133.5deg)
+    animation: reveal 2s backwards
+    width: 80vh
+    height: 1.4vh
+    background-color: #005c53
+    transition: 0.3s
+    margin-top: -1vh
+
+@keyframes reveal
+  from 
+    clip-path: inset(0 100% 0 0)
+  
+  to 
+    clip-path: inset(0 0 0 0) 
+
+
+.white
+    color: #f2ebd3
+.grey
+    color: #545454
+
+                 

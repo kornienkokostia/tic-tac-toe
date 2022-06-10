@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #14bdac;
+  font-family: 'Nunito', cursive;
+}
+
+.game-field {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game-field .field-heading {
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-top: 1.5%;
+}
+
+.game-field .field-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #002147;
+  font-size: 8vh;
+  line-height: 0vh;
+  font-weight: 900;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .field-players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .player {
+  font-size: 4vh;
+  font-weight: 800;
+  line-height: 0.2em;
+  width: 30vh;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5vh;
+  font-weight: 800;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .one-score {
+  padding-right: 1vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .two-score {
+  padding-left: 1vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .field {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 60%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-gap: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0;
+  padding-left: 0.6%;
+}
+
+.game-field .field-cell.one {
+  border-right: 1.2vh solid;
+  border-bottom: 1.2vh solid;
+  border-color: #0da192;
+}
+
+.game-field .field-cell.two, .game-field .field-cell.four, .game-field .field-cell.five {
+  border-right: 1.2vh solid;
+  border-bottom: 1.2vh solid;
+  border-color: #0da192;
+}
+
+.game-field .field-cell.three, .game-field .field-cell.six {
+  border-bottom: 1.2vh solid;
+  border-color: #0da192;
+  margin-left: -1.2vh;
+}
+
+.game-field .field-cell.seven, .game-field .field-cell.eight {
+  border-right: 1.2vh solid;
+  border-color: #0da192;
+}
+
+.game-field .field-cell.nine {
+  margin-left: -1.2vh;
+}
+
+.game-field .field-cell {
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  width: 17vh;
+  height: 17vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15vh;
+  padding-top: 1vh;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #ffffff00;
+}
+
+.game-field .field-buttons {
+  height: 12%;
+  padding-top: 1%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.game-field .field-buttons .button {
+  background-color: #202124;
+  color: #ffffff;
+  height: 7.5vh;
+  border: none;
+  border-radius: 2vh;
+  font-family: 'Nunito', cursive;
+  font-weight: 700;
+  font-size: 2.5vh;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  width: 25vh;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.highlight1 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #f2ebd3;
+}
+
+.highlight2 {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #545454;
+}
+
+.win-line::after {
+  content: '';
+  position: absolute;
+  -webkit-animation: reveal 2s backwards;
+          animation: reveal 2s backwards;
+  width: 58vh;
+  height: 1.4vh;
+  background-color: #005c53;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.win-column::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-animation: reveal 2s backwards;
+          animation: reveal 2s backwards;
+  width: 60vh;
+  height: 1.4vh;
+  background-color: #005c53;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: -0.7vh;
+}
+
+.win-diagonal-l-r::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: rotate(46.5deg);
+          transform: rotate(46.5deg);
+  -webkit-animation: reveal 2s backwards;
+          animation: reveal 2s backwards;
+  width: 80vh;
+  height: 1.4vh;
+  background-color: #005c53;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 0.8vh;
+}
+
+.win-diagonal-r-l::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: rotate(133.5deg);
+          transform: rotate(133.5deg);
+  -webkit-animation: reveal 2s backwards;
+          animation: reveal 2s backwards;
+  width: 80vh;
+  height: 1.4vh;
+  background-color: #005c53;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: -1vh;
+}
+
+@-webkit-keyframes reveal {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+
+.white {
+  color: #f2ebd3;
+}
+
+.grey {
+  color: #545454;
+}
+/*# sourceMappingURL=style.css.map */
